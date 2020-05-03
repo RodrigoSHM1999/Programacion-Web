@@ -2,12 +2,20 @@
 <html>
 	<head>
 		<title>Pagina 1</title>
+		<script type="text/javascript">
+			function max(){
+    			document.getElementById('demo').style.fontSize='35px'
+    			document.getElementById('demo').style.color="green"
+			}
+			function min(){
+				document.getElementById('demo').style.fontSize='25px'
+				document.getElementById('demo').style.color="red"
+			}
+		</script>
 	</head>	
 	<body>
-
 		<p id="demo">Texto a modificar</p>
-
-		<button class="background-color: #008CBA"type="button" onclick="document.getElementById('demo').style.fontSize='35px'">Aumentar px</button>
-		<button  value="green" type="button" onclick="document.getElementById('demo').style.fontSize='25px'">Disminuir px</button>
+		<button  onclick="max()">Aumentar px</button>
+		<button  onclick="min()">Disminuir px</button>
 	</body>
 </html>

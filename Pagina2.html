@@ -2,29 +2,51 @@
 <html>
 	<head>
 		<title>Pagina 2</title>
-		<script>
-			var x = myFunction(4, 3);
-			document.getElementById("demo").innerHTML = x;
-
-			function myFunction(a, b) {
-			  return a * b;
-			}
-		</script>
+		
+		
 	</head>	
 	<body>
+		
 		Ingrese el primer numero
 
 		<p id="n1">Ingrese el primer numero</p>
-		<input type="text" name="nombredelacaja">
+		<input id="firt"type="text" name="firt">
 		<p id="n2">Ingrese el segundo numero</p>
-		<input type="text" name="nombredelacaja"><br><br>
+		<input id="second" type="text" name="second"><br><br>
 		eliga la opracion a realizar<br><br>
-		<button type="button">Suma</button>
-		<button type="button">Resta</button>
-		<button type="button">Multiplicacion</button>
-		<button type="button">Division</button>
+		<button type="button" onclick="suma()">Suma</button>
+		<button type="button" onclick="resta()">Resta</button>
+		<button type="button"onclick="multiplicacion()">Multiplicacion</button>
+		<button type="button" onclick="division()">Division</button><br>
+		<p id="rpta">El resultado es:</p>
 
-	
+	<script>
+		
+			function suma() {
+				var a = document.getElementById("firt").value;
+				var b = document.getElementById("second").value;
+				document.getElementById("rpta").innerHTML = "El resultado es :"+(parseInt(a)+parseInt(b));
+			}
+
+			function resta() {
+				var a = document.getElementById("firt").value;
+				var b = document.getElementById("second").value;
+				document.getElementById("rpta").innerHTML = "El resultado es :"+(parseInt(a)-parseInt(b));
+			}
+
+			function multiplicacion() {
+			    var a = document.getElementById("firt").value;
+				var b = document.getElementById("second").value;
+				document.getElementById("rpta").innerHTML = "El resultado es :"+(parseInt(a)*parseInt(b));
+			}
+
+			function division() {
+				var a = document.getElementById("firt").value;
+				var b = document.getElementById("second").value;
+				document.getElementById("rpta").innerHTML = "El resultado es :"+(parseInt(a)/parseInt(b));
+			}
+		</script>
 
 	</body>
 </html>
+
