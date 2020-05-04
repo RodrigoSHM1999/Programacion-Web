@@ -2,13 +2,18 @@
 <html>
 	<head>
 		<title>Pagina 1</title>
-		<script type="text/javascript">
+		<script >
+			var tam=1;
 			function max(){
-    			document.getElementById('demo').style.fontSize='35px'
+				tam += 0.1;
+	            document.body.style.fontSize = tam + "em";
+    			//document.getElementById('demo').style.fontSize='35px'
     			document.getElementById('demo').style.color="green"
 			}
 			function min(){
-				document.getElementById('demo').style.fontSize='25px'
+				tam -= 0.1;
+	            document.body.style.fontSize = tam + "em";
+				//document.getElementById('demo').style.fontSize='25px'
 				document.getElementById('demo').style.color="red"
 			}
 		</script>
